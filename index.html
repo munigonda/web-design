@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitEdge — Train Smarter</title>
+  <meta name="description" content="A modern fitness website with header, sections, images, and footer." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-grid">
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <span class="logo">F</span>
+          <span class="brand-name">FitEdge</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" id="menuBtn">Menu</button>
+          <ul id="mobile-menu">
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="badge">New: 6-Week Strength Starter</span>
+          <h1 id="hero-title">Train smarter. Feel stronger. Live better.</h1>
+          <p>Personalized programs, world-class coaches, and a supportive community—online or in-gym.</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Start Free Consult</a>
+            <a class="btn" href="#programs">Explore Programs</a>
+          </div>
+        </div>
+        <div class="shot">
+          <img src="images/img1.jpg" alt="Athlete lifting barbell" />
+        </div>
+      </section>
+
+      <!-- Programs -->
+      <section id="programs" class="container section">
+        <h2 class="section-title">Programs</h2>
+        <p class="section-desc">Choose a track that fits your goals. Each plan includes mobility, strength, and conditioning.</p>
+        <div class="grid grid-3">
+          <article class="card">
+            <img src="images/img2.jpg" alt="Weights in gym">
+            <h3>Strength &amp; Conditioning</h3>
+            <p>Progressive cycles to build muscle and power safely.</p>
+          </article>
+          <article class="card">
+            <img src="images/img3.jpg" alt="Running outdoors">
+            <h3>Fat Loss Accelerator</h3>
+            <p>High-intensity training, nutrition guidance, and habit coaching.</p>
+          </article>
+          <article class="card">
+            <img src="images/img4.jpg" alt="Stretching on mat">
+            <h3>Mobility &amp; Recovery</h3>
+            <p>Daily flows and prehab routines to move better and feel better.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Classes -->
+      <section id="classes" class="container section">
+        <h2 class="section-title">Classes &amp; Schedule</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Weekly Highlights</h3>
+            <ul class="list">
+              <li>Mon — Lower Body Strength (60m)</li>
+              <li>Wed — Conditioning Intervals (45m)</li>
+              <li>Fri — Upper Body Power (60m)</li>
+              <li>Sat — Mobility Flow (30m)</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>What to Expect</h3>
+            <p>Warm-ups, scaling, cool-downs, and coach support every class.</p>
+            <img src="images/img5.jpg" alt="Group class training">
+          </article>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="container section">
+        <h2 class="section-title">About FitEdge</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <p>We are a team of certified coaches helping people get strong, lean, and pain-free with sustainable training.</p>
+            <p><strong>Identity:</strong> FitEdge — science-based, practical coaching with a supportive vibe.</p>
+          </div>
+          <div class="card">
+            <img src="images/img6.jpg" alt="Modern gym interior">
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="container section">
+        <h2 class="section-title">Get Your Free Consult</h2>
+        <div class="grid grid-2">
+          <form class="card" aria-label="Contact form" onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.');">
+            <label>
+              <span class="small">Full Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              <span class="small">Email</span>
+              <input type="email" name="email" placeholder="your@email.com" required />
+            </label>
+            <label>
+              <span class="small">Goal</span>
+              <select name="goal" aria-label="Select goal">
+                <option>Get stronger</option>
+                <option>Lose fat</option>
+                <option>Improve mobility</option>
+                <option>General health</option>
+              </select>
+            </label>
+            <label>
+              <span class="small">Message</span>
+              <textarea name="message" placeholder="Share injuries, experience, or preferences..."></textarea>
+            </label>
+            <button class="btn primary" type="submit">Request Consult</button>
+          </form>
+          <div class="card">
+            <h3>Visit Us</h3>
+            <p class="small">123 Strength Ave, Suite 2B<br/>Washington, DC 20001</p>
+            <p class="small">Open: Mon–Sat, 6:00–20:00</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container foot">
+        <p>© <span id="year"></span> FitEdge. All rights reserved.</p>
+        <nav>
+          <a href="#top">Back to top</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
