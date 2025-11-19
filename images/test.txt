@@ -1,1 +1,0 @@
-This is a test file to create a folder for images and will be deleted once the folder is created 
