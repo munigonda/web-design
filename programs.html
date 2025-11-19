@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitEdge — Programs</title>
+  <meta name="description" content="FitEdge training programs for strength, fat loss, and mobility." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="page-grid">
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo">F</span>
+          <span class="brand-name">FitEdge</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" id="menuBtn">Menu</button>
+          <ul id="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="container section">
+        <h1 class="section-title">Programs</h1>
+        <p class="section-desc">Choose a track that fits your goals. Each plan includes mobility, strength, and conditioning.</p>
+        <div class="grid grid-3">
+          <article class="card">
+            <img src="images/img2.jpg" alt="Weights in gym">
+            <h3>Strength &amp; Conditioning</h3>
+            <p>Progressive cycles to build muscle, power, and confidence, with tailored sets, reps, and rest.</p>
+          </article>
+          <article class="card">
+            <img src="images/img3.jpg" alt="Running outdoors">
+            <h3>Fat Loss Accelerator</h3>
+            <p>High-intensity training, nutrition guidance, and habit coaching to burn fat and keep it off.</p>
+          </article>
+          <article class="card">
+            <img src="images/img4.jpg" alt="Stretching on mat">
+            <h3>Mobility &amp; Recovery</h3>
+            <p>Daily flows and prehab routines so you can move better, reduce pain, and train longer.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container foot">
+        <p>© <span id="year"></span> FitEdge. All rights reserved.</p>
+        <nav>
+          <a href="#top">Back to top</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

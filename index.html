@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitEdge — Train Smarter</title>
+  <meta name="description" content="FitEdge — Train smarter. Feel stronger. Live better." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="page-grid">
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo">F</span>
+          <span class="brand-name">FitEdge</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" id="menuBtn">Menu</button>
+          <ul id="mobile-menu">
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="badge">New: 6-Week Strength Starter</span>
+          <h1 id="hero-title">Train smarter. Feel stronger. Live better.</h1>
+          <p>Personalized programs, world-class coaches, and a supportive community—online or in-gym.</p>
+          <div class="cta">
+            <a class="btn primary" href="contact.html">Start Free Consult</a>
+            <a class="btn" href="programs.html">Explore Programs</a>
+          </div>
+        </div>
+        <div class="shot">
+          <img src="images/img1.jpg" alt="Athlete lifting barbell" />
+        </div>
+      </section>
+
+      <!-- Quick Links to Other Pages -->
+      <section class="container section">
+        <h2 class="section-title">Find Your Edge</h2>
+        <p class="section-desc">Start with the area that matches your current goal.</p>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Programs</h3>
+            <p>Strength, fat loss, and mobility tracks designed for real life.</p>
+            <a class="btn" href="programs.html">View Programs</a>
+          </article>
+          <article class="card">
+            <h3>Classes</h3>
+            <p>Weekly group sessions with coaching, community, and energy.</p>
+            <a class="btn" href="classes.html">View Schedule</a>
+          </article>
+          <article class="card">
+            <h3>Free Consult</h3>
+            <p>Tell us your goals, history, and schedule – we’ll guide you.</p>
+            <a class="btn" href="contact.html">Get Started</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container foot">
+        <p>© <span id="year"></span> FitEdge. All rights reserved.</p>
+        <nav>
+          <a href="#top">Back to top</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

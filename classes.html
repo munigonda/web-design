@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitEdge — Classes & Schedule</title>
+  <meta name="description" content="FitEdge weekly classes and training schedule." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="page-grid">
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo">F</span>
+          <span class="brand-name">FitEdge</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" id="menuBtn">Menu</button>
+          <ul id="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="container section">
+        <h1 class="section-title">Classes &amp; Schedule</h1>
+        <p class="section-desc">Join our coached sessions and train with a supportive community.</p>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Weekly Highlights</h3>
+            <ul class="list">
+              <li>Mon — Lower Body Strength (60m)</li>
+              <li>Wed — Conditioning Intervals (45m)</li>
+              <li>Fri — Upper Body Power (60m)</li>
+              <li>Sat — Mobility Flow (30m)</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>What to Expect</h3>
+            <p>Every class includes warm-ups, scaling options, technique coaching, and a guided cool-down.</p>
+            <img src="images/img5.jpg" alt="Group class training">
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container foot">
+        <p>© <span id="year"></span> FitEdge. All rights reserved.</p>
+        <nav>
+          <a href="#top">Back to top</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
